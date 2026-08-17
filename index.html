@@ -302,6 +302,7 @@ const FLAVORS = [
   { id:'pistacho', name:'Chocolate y Pistacho', desc:'Chocolate blanco o semiamargo, pistachos y crema de pistacho.', price:3500, cls:'pistacho', crumbs:3 },
   { id:'avena',    name:'Avena con Arándanos', desc:'Textura crocante con un toque frutal.', price:3500, cls:'avena', crumbs:4 },
   { id:'levain',   name:'Levain Bakery',       desc:'Al estilo neoyorquino: crocante por fuera, suave por dentro.', price:3500, cls:'levain', crumbs:3 },
+  { id:'doblechoc',name:'Doble Chocolate',     desc:'Chocolate intenso en la masa y en cada trozo.', price:3500, cls:'doblechoc', crumbs:4 },
 ];
 
 const state = {};
@@ -368,6 +369,19 @@ function cookieMarkup(f){
         <path d="M22,64 L40,60 L42,80 L24,82 Z" fill="#2E1A0C"/>
         <path d="M46,8 Q60,20 50,36" stroke="#5C4021" stroke-width="1.6" fill="none" opacity="0.6"/>
         <path d="M76,50 Q90,60 80,74" stroke="#5C4021" stroke-width="1.6" fill="none" opacity="0.6"/>`;
+      break;
+    case 'doblechoc':
+      stops = ['#5C3A22','#20100A'];
+      extras = `
+        <ellipse cx="32" cy="28" rx="7" ry="6" fill="#100804"/>
+        <ellipse cx="82" cy="24" rx="6" ry="5" fill="#100804"/>
+        <ellipse cx="88" cy="60" rx="7" ry="6" fill="#100804"/>
+        <ellipse cx="46" cy="72" rx="6" ry="5" fill="#100804"/>
+        <ellipse cx="68" cy="88" rx="6.5" ry="5.5" fill="#100804"/>
+        <ellipse cx="26" cy="82" rx="4.5" ry="4" fill="#100804"/>
+        <ellipse cx="56" cy="40" rx="5.5" ry="4.5" fill="#F3ECD2"/>
+        <ellipse cx="30" cy="56" rx="4.5" ry="3.8" fill="#F3ECD2"/>
+        <ellipse cx="78" cy="44" rx="4" ry="3.5" fill="#F3ECD2"/>`;
       break;
   }
 
@@ -448,7 +462,6 @@ document.getElementById('orderBtn').addEventListener('click', () => {
 });
 
 renderMenu();
-  
 </script>
 
 </body>
